@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mutual_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">ngango</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<mapping class="com.musee.domain.Artifact" />
+		<mapping class="com.musee.domain.ArtifactCategory" />
+		<mapping class="com.musee.domain.Contact" />
+		<mapping class="com.musee.domain.UserCategory" />
+		<mapping class="com.musee.domain.Users" />
+		<mapping class="com.musee.domain.LoginHistoric" />
+		<mapping class="com.musee.domain.Documents" />
+		<mapping class="com.musee.domain.UploadingFiles" />
+	</session-factory>
+</hibernate-configuration>
+
